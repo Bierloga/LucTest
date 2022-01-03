@@ -7,7 +7,12 @@ const List = (props) => {
             {groceries.map((item) => {
                 return (
                     <div key={item.id}>
-                        <ListItem key={item.id} value={item.value} handleDelete={()=>{props.handleDelete()}} />
+                        <ListItem
+                            key={item.id}
+                            id={item.id}
+                            value={item.value}
+                            handleDelete={props.handleDelete}
+                        />
                     </div>
                 )
             })}
